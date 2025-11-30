@@ -1,0 +1,123 @@
+/* Accordion Container */
+.accordion-item {
+    margin-bottom: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: box-shadow 0.2s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Accordion Header */
+.accordion-header {
+    padding: 16px 20px;
+    background: #f8fafc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1e293b;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.accordion-header:hover {
+    background: #f1f5f9;
+}
+
+.accordion-header:active {
+    background: #e2e8f0;
+}
+
+/* Plus/Minus Icon */
+.accordion-header span {
+    font-size: 20px;
+    font-weight: 400;
+    color: #64748b;
+    transition: transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+/* Accordion Content */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+    background: #ffffff;
+    color: #475569;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.accordion-content.open {
+    max-height: 500px;
+    /* Adjust based on your content */
+    padding: 16px 20px 20px 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    .accordion-item {
+        background: #1e293b;
+        border-color: #334155;
+    }
+
+    .accordion-header {
+        background: #334155;
+        color: #f1f5f9;
+    }
+
+    .accordion-header:hover {
+        background: #475569;
+    }
+
+    .accordion-content {
+        background: #1e293b;
+        color: #cbd5e1;
+    }
+
+    .accordion-header span {
+        color: #94a3b8;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .accordion-header {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .accordion-content.open {
+        padding: 14px 16px 16px 16px;
+    }
+
+    .accordion-item {
+        margin-bottom: 6px;
+    }
+}

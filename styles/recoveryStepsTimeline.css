@@ -1,0 +1,95 @@
+/* src/components/RecoveryTimeline.css */
+.recovery-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.recovery-timeline::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -40px;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 3px solid #6366f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-number {
+    font-size: 14px;
+    font-weight: bold;
+    color: #6366f1;
+}
+
+.timeline-content {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    margin-left: 20px;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.timeline-header h3 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.25rem;
+}
+
+.timeline-duration {
+    background: #f0f9ff;
+    color: #0284c7;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.timeline-description {
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.timeline-tasks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-tasks li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    color: #475569;
+}
+
+.timeline-tasks li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}

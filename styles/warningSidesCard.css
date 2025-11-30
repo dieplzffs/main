@@ -1,0 +1,64 @@
+/* src/components/WarningSignsCard.css */
+.warning-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.warning-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.warning-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.warning-icon {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #f3f4f6;
+    border-radius: 50%;
+}
+
+.warning-card h3 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin: 0;
+}
+
+.warning-signs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.warning-signs-list li {
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    color: #64748b;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.warning-signs-list li:last-child {
+    border-bottom: none;
+}
+
+.warning-signs-list li::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: #ef4444;
+    font-size: 14px;
+}

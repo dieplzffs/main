@@ -1,0 +1,91 @@
+/* src/components/HelpSection.css */
+.help-resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.help-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.help-card:hover {
+    border-color: #6366f1;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+}
+
+.help-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.help-icon {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #f0f9ff;
+    border-radius: 50%;
+}
+
+.help-availability {
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.help-title {
+    font-size: 1.125rem;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.help-description {
+    color: #64748b;
+    font-size: 14px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.help-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.help-contact {
+    font-weight: 600;
+    color: #475569;
+    font-size: 16px;
+}
+
+.help-button {
+    width: 100%;
+    padding: 12px;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.help-button:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
